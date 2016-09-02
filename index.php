@@ -79,7 +79,7 @@ function getSR($number){
 	$result = 1;
 	for($x2 = 1; $x2 < $number; $x2++){
 		/* CALCULO PARA ENCONTRAR A RAIZ */
-	 	$compara = number_format((($result + 19/$result)/2),3, '.', '');
+	 	$compara = number_format((($result + $number/$result)/2),3, '.', '');
 		if($result == $compara){
 			break;
 		}
