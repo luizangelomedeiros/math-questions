@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>OMELETE</title>
+	<title>Questôes Matemáticas</title>
 	<link rel="stylesheet" href="">
 </head>
 <body>
 	
-<h1>Questões GeekHunter</h1>
+<h1>Questões Matemáticas</h1>
 
 <h2>Questão 1: Greatest Common Divisor</h2>
 <? 
@@ -76,15 +76,16 @@ foreach($arrayTest as $count => $result){
 /* FUNÇÃO PARA DESCOBRIR A RAIZ QUADRADA */
 function getSR($number){
 	/* REPETE O LAÇO PELO NUMERO QUE FOI INSERIDO */
-	for($x = 1; $x <= $number; $x++){
-		$result = 1;
-		for($x2 = 1; 10 >= $x2; $x2++){
-			/* CALCULO PARA ENCONTRAR A RAIZ */
-	 		$result = ($result + $number/$result)/2;
-
-			/* FORMATA O NUMERO */
-	 		$result = number_format($result,3, '.', '');
+	$result = 1;
+	for($x2 = 1; $x2 < $number; $x2++){
+		/* CALCULO PARA ENCONTRAR A RAIZ */
+	 	$compara = number_format((($result + 19/$result)/2),3, '.', '');
+		if($result == $compara){
+			break;
 		}
+	 	$result = ($result +$number/$result)/2;
+		/* FORMATA O NUMERO */
+	 	$result = number_format($result,3, '.', '');
 	}
 	return $result;
 }
